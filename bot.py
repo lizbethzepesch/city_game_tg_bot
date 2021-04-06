@@ -2,7 +2,7 @@ from parser_city import main, list_of_cities
 from check_city import check_this_city
 import telebot
 
-TOKEN = "1095275624:AAHkD_FXezmRwkINp6pTjS4DZvkmHp3yq0Q"
+TOKEN = "" # подставить свой
 bot = telebot.TeleBot(TOKEN)
 game_over = False #глобальная переменная проверки на то, закончилась ли игра
 
@@ -53,7 +53,7 @@ def get_city(message):
             bot.reply_to(message, "Введите название города, которое начинается на \"" + letter.upper() + "\"")
             return
 
-    # проверка на то, ечть ли такой город, какой назвал юзер
+    # проверка на то, есть ли такой город, какой назвал юзер
     checking_the_city = check_this_city(users_word)
 
     if not checking_the_city:
